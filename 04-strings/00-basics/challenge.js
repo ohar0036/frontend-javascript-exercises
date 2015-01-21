@@ -8,7 +8,7 @@ module.exports.sliceItAndCombineIt = function(bigString, startA, endA, startB, e
   var subStringB = oldstring.slice(startB, endB);
 
   var finalString = subStringA + subStringB;
-  
+  .concat
 };
 
 module.exports.findFirstMatch = function(text, searchString) {
@@ -22,5 +22,12 @@ module.exports.findLastMatch = function(text, searchString) {
 };
 
 module.exports.substringBetweenMatches = function(text, searchString) {
-  return text.lastIndexOf(searchString);
+  var firstIndex = text.firstIndexOf(searchString);
+  var lastIndex = text.lastIndexOf(searchString);
+  return text.subString(firstIndex, lastIndexOf);
 };
+
+// console.log(firstIndex)
+//console.log(lastIndex)
+//console.log(text.substring(firstIndex, lastIndex))
+//text.length
