@@ -4,7 +4,11 @@ module.exports.formLetter = function(firstName, senderName, message) {
 };
 
 module.exports.sliceItAndCombineIt = function(bigString, startA, endA, startB, endB) {
-  return bigString.concat([startA], [endA], [startB], [endB]);
+  var subStringA = oldstring.slice(startA, endA);
+  var subStringB = oldstring.slice(startB, endB);
+
+  var finalString = subStringA + subStringB;
+  
 };
 
 module.exports.findFirstMatch = function(text, searchString) {
