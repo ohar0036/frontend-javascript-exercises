@@ -6,9 +6,8 @@ module.exports.formLetter = function(firstName, senderName, message) {
 module.exports.sliceItAndCombineIt = function(bigString, startA, endA, startB, endB) {
   var subStringA = oldstring.slice(startA, endA);
   var subStringB = oldstring.slice(startB, endB);
-
   var finalString = subStringA + subStringB;
-  .concat
+  return finalString;
 };
 
 module.exports.findFirstMatch = function(text, searchString) {
@@ -22,9 +21,13 @@ module.exports.findLastMatch = function(text, searchString) {
 };
 
 module.exports.substringBetweenMatches = function(text, searchString) {
-  var firstIndex = text.firstIndexOf(searchString);
+  var firstIndex = text.indexOf(searchString);
   var lastIndex = text.lastIndexOf(searchString);
   return text.subString(firstIndex, lastIndexOf);
+  console.log (firstIndex);
+  console.log (lastIndex);
+  console.log (text.substring)(firstIndex, lastIndex);
+
 };
 
 // console.log(firstIndex)

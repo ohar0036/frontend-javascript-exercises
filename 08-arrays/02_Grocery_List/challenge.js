@@ -1,6 +1,7 @@
   module.exports.addItem = function(firstArray, secondArray) {
-    var firstArray = "bananas";
     var secondArray = [];
+    secondArray.push(firstArray);
+    
 
 };
 
