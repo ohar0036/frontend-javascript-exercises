@@ -1,6 +1,8 @@
-  module.exports.addItem = function(firstArray, secondArray) {
-    var secondArray = [];
-    secondArray.push(firstArray);
+  module.exports.addItem = function(item, groceryList) {
+    if (groceryList.indexOf(item) == -1){
+      groceryList.push(item);
+    }
+    return groceryList;
     
 
 };

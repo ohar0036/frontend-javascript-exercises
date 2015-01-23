@@ -3,9 +3,10 @@ module.exports.formLetter = function(firstName, senderName, message) {
 
 };
 
+
 module.exports.sliceItAndCombineIt = function(bigString, startA, endA, startB, endB) {
-  var subStringA = oldstring.slice(startA, endA);
-  var subStringB = oldstring.slice(startB, endB);
+  var subStringA = bigString.substring(startA, endA);
+  var subStringB = bigString.substring(startB, endB);
   var finalString = subStringA + subStringB;
   return finalString;
 };
@@ -21,16 +22,8 @@ module.exports.findLastMatch = function(text, searchString) {
 };
 
 module.exports.substringBetweenMatches = function(text, searchString) {
-  var firstIndex = text.indexOf(searchString);
+  var firstIndex = text.indexOf(searchString) + searchString.length;
   var lastIndex = text.lastIndexOf(searchString);
-  return text.subString(firstIndex, lastIndexOf);
-  console.log (firstIndex);
-  console.log (lastIndex);
-  console.log (text.substring)(firstIndex, lastIndex);
+  return text.substring(firstIndex, lastIndex);
 
 };
-
-// console.log(firstIndex)
-//console.log(lastIndex)
-//console.log(text.substring(firstIndex, lastIndex))
-//text.length
